@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <title>OneTimeSecret</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+    <script src="popup.js"></script>
+</head>
+<body>
+<div id="banner">
+    <div class="broadcast"></div>
+</div>
+<div class="masthead">
+    <div class="nav pull-right">
+        <a href="https://onetimesecret.com/signup" title="Signup - Individual and Business plans" target="_blank">Create
+            Account</a> |
+    </div>
+    <a href="/"><h3 id="logo"></h3></a>
+</div>
+<div class="content">
+
+    <form class="form-horizontal well small">
+        <fieldset>
+            <legend>1/ Save your API Token</legend>
+            <div class="control-group">
+                <label class="control-label" for="username">Email</label>
+
+                <div class="controls">
+                    <input type="text" id="username" class="input-xlarge" value="" placeholder="">
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="token">Token</label>
+
+                <div class="controls">
+                    <input type="password" id="token" class="input-medium" value="" placeholder="">
+                    <a title="Go to your account in OneTimeSecret.com and generate an API Key"
+                       alt="Go to your account in OneTimeSecret.com and generate an API Key"><img
+                            src="img/info.png" class="info-img"/></a>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="text-center">
+                    <button type="button" id="api" class="btn btn-custom">Save Account</button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+
+    <hr/>
+
+    <form class="form-horizontal well" id="form-crypt">
+        <fieldset>
+            <legend>2/ Crypt text</legend>
+            <div class="control-group">
+                <div class="controls" style="margin-left: 20px;">
+                    <textarea id="text-to-crypt" placeholder="Text to crypt..."></textarea>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="text-center">
+                    <button type="button" id="crypt" class="btn btn-large">Crypt</button>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+    <div class="well success" id="div-result" style="display:none;">
+        <div id="result">
+        </div>
+        <a id="copy-clip"><img src="img/copy.png"/></a>
+        <a id="close-result"><img src="img/close.png"/></a>
+    </div>
+</div>
+</body>
+</html>
